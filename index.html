@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nkosi Building Projects | Residential Construction & Project Management</title>
+  <meta
+    name="description"
+    content="Nkosi Building Projects delivers residential building, renovations, finishing, strategic planning, and project management in Johannesburg and across Gauteng."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --bg: #0b0b0a;
+      --panel: rgba(19, 18, 15, 0.78);
+      --gold: #cfa54a;
+      --gold-strong: #f4cf72;
+      --text: #f7f2e8;
+      --muted: #beb4a2;
+      --ink: #1a1712;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --container: min(1180px, calc(100% - 2rem));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(244, 207, 114, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(191, 134, 38, 0.14), transparent 22%),
+        linear-gradient(180deg, #12110d 0%, #0a0a09 52%, #100f0c 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 90%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    section {
+      padding: 5.5rem 0;
+    }
+
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(8, 8, 7, 0.92), rgba(8, 8, 7, 0.68));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 74px;
+      height: 74px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+      padding: 0.45rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    }
+
+    .brand-kicker,
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.72rem;
+      color: var(--gold-strong);
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a {
+      transition: color 180ms ease;
+    }
+
+    .header-cta {
+      flex-shrink: 0;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--text);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.95rem 1.35rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+      cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #16120b;
+      background: linear-gradient(135deg, var(--gold-strong), var(--gold));
+      box-shadow: 0 14px 36px rgba(207, 165, 74, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+      border-color: rgba(255, 255, 255, 0.14);
+    }
+
+    .hero {
+      padding: 4.6rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      padding: 1rem 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 6vw, 5.35rem);
+      max-width: 11ch;
+      margin-top: 1rem;
+    }
+
+    .hero-copy p {
+      max-width: 62ch;
+      margin-top: 1.4rem;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .trust-pill,
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      font-size: 0.92rem;
+    }
+
+    .dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--gold-strong), var(--gold));
+      box-shadow: 0 0 0 6px rgba(207, 165, 74, 0.12);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .hero-card {
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015)),
+        rgba(8, 8, 7, 0.65);
+      box-shadow: var(--shadow);
+      padding: 1.3rem;
+      min-height: 100%;
+    }
+
+    .hero-visual {
+      position: relative;
+      aspect-ratio: 4 / 4.7;
+      border-radius: calc(var(--radius-xl) - 6px);
+      background:
+        linear-gradient(145deg, rgba(207, 165, 74, 0.18), rgba(255, 255, 255, 0.03)),
+        #13120f;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.35rem;
+      display: grid;
+      align-content: space-between;
+      isolation: isolate;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -16% 48%;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244, 207, 114, 0.32), transparent 62%);
+      filter: blur(4px);
+      z-index: -1;
+    }
+
+    .hero-logo {
+      width: min(82%, 430px);
+      justify-self: center;
+      border-radius: 24px;
+      box-shadow: 0 24px 42px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-note {
+      display: grid;
+      gap: 0.85rem;
+      padding: 1.2rem;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      max-width: 82%;
+    }
+
+    .hero-note strong {
+      font-size: 1.05rem;
+    }
+
+    .hero-note span {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.96rem;
+    }
+
+    .info-strip {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .info-card {
+      padding: 1.25rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      min-height: 138px;
+    }
+
+    .info-card h3 {
+      font-size: 1rem;
+      margin-top: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .info-card p {
+      margin-top: 0.55rem;
+      font-size: 0.94rem;
+      line-height: 1.68;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 0.9rem;
+      align-content: start;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      max-width: 11ch;
+    }
+
+    .section-heading p {
+      max-width: 62ch;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+        rgba(255, 255, 255, 0.02);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+      transition: transform 200ms ease, border-color 200ms ease;
+    }
+
+    .service-card:hover,
+    .service-card:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(244, 207, 114, 0.42);
+    }
+
+    .service-icon {
+      width: 2.7rem;
+      height: 2.7rem;
+      border-radius: 14px;
+      display: inline-grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(244, 207, 114, 0.18), rgba(255, 255, 255, 0.04));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--gold-strong);
+      font-weight: 800;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .service-card p {
+      margin-top: 0.7rem;
+      font-size: 0.95rem;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-frame {
+      padding: 1.15rem;
+      border-radius: 32px;
+      background:
+        linear-gradient(180deg, rgba(244, 207, 114, 0.14), rgba(255, 255, 255, 0.02)),
+        rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .about-frame img {
+      border-radius: 24px;
+      aspect-ratio: 1 / 1.08;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0 24px 42px rgba(0, 0, 0, 0.26);
+    }
+
+    .about-copy .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(2rem, 4vw, 3.45rem);
+      max-width: 10ch;
+    }
+
+    .about-story {
+      margin-top: 1.3rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .about-points {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .about-point {
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .about-point strong {
+      display: block;
+      font-size: 0.98rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .about-point span {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.92rem;
+    }
+
+    .process {
+      background:
+        linear-gradient(180deg, rgba(239, 229, 212, 0.98), rgba(230, 217, 196, 0.98)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+      color: var(--ink);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .process .eyebrow,
+    .process h2,
+    .process h3 {
+      color: var(--ink);
+    }
+
+    .process p {
+      color: rgba(26, 23, 18, 0.74);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .process-card {
+      padding: 1.6rem;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(26, 23, 18, 0.08);
+      box-shadow: 0 18px 38px rgba(89, 69, 31, 0.12);
+    }
+
+    .process-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: var(--ink);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      gap: 1.3rem;
+      align-items: start;
+    }
+
+    .cta-panel,
+    .form-panel {
+      padding: 1.5rem;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        rgba(255, 255, 255, 0.02);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-panel h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      max-width: 10ch;
+      margin-top: 0.8rem;
+    }
+
+    .cta-panel p {
+      margin-top: 1rem;
+    }
+
+    .cta-highlights {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .cta-highlights .stat-pill {
+      justify-content: flex-start;
+      width: fit-content;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    label {
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      padding: 0.95rem 1rem;
+      font: inherit;
+      transition: border-color 180ms ease, background 180ms ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.38);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: rgba(244, 207, 114, 0.55);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .brief-output {
+      margin-top: 1rem;
+      padding: 1.2rem;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .brief-output[hidden] {
+      display: none;
+    }
+
+    .brief-output pre {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: inherit;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .site-footer {
+      padding: 1.4rem 0 2.2rem;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.92rem;
+    }
+
+    .footer-row {
+      width: var(--container);
+      margin: 0 auto;
+      padding-top: 1.3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 550ms ease, transform 550ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .about-wrap,
+      .cta-wrap,
+      .services-grid,
+      .process-grid,
+      .info-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .about-points,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-note {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 840px) {
+      .site-nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 3rem;
+      }
+
+      .brand-title {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 4.2rem 0;
+      }
+
+      .site-header .container {
+        align-items: flex-start;
+      }
+
+      .brand img {
+        width: 62px;
+        height: 62px;
+      }
+
+      .hero h1 {
+        max-width: 12ch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Nkosi Building Projects home">
+        <img src="./logo%20.jpeg" alt="Nkosi Building Projects logo">
+        <div>
+          <div class="brand-kicker">Johannesburg, Gauteng</div>
+          <div class="brand-title">Nkosi Building Projects (Pty) Ltd</div>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+      </nav>
+      <a href="#contact" class="button button-secondary header-cta">Start a Project</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Strategic planning. Precise execution. Elegant finishes.</div>
+          <h1>Plan clearly. Build confidently. Finish beautifully.</h1>
+          <p>
+            Nkosi Building Projects helps homeowners, developers, and property investors move from concept
+            to compliant delivery with a disciplined approach to residential building, renovations, finishing,
+            and project management.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Request a Consultation</a>
+            <a class="button button-secondary" href="#services">Explore Services</a>
+          </div>
+          <div class="trust-row" aria-label="Company highlights">
+            <span class="trust-pill"><span class="dot" aria-hidden="true"></span>Johannesburg-based</span>
+            <span class="trust-pill"><span class="dot" aria-hidden="true"></span>Compliance-led delivery</span>
+            <span class="trust-pill"><span class="dot" aria-hidden="true"></span>Residential build focus</span>
+          </div>
+        </div>
+
+        <div class="hero-side reveal">
+          <div class="hero-card">
+            <div class="hero-visual">
+              <img class="hero-logo" src="./logo%20.jpeg" alt="Nkosi Building Projects brand mark">
+              <div class="hero-note">
+                <strong>Build with structure from day one.</strong>
+                <span>
+                  Clear planning, active project oversight, and quality-conscious finishing reduce uncertainty
+                  and create a stronger final result.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container info-strip">
+        <article class="info-card reveal">
+          <div class="eyebrow">01</div>
+          <h3>Strategic Project Setup</h3>
+          <p>Start with a sharper build plan, clearer scope, and better decision-making before work begins on site.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="eyebrow">02</div>
+          <h3>Managed Delivery</h3>
+          <p>Keep timelines, site activity, and stakeholder communication under control as the project moves forward.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="eyebrow">03</div>
+          <h3>Finishing That Feels Premium</h3>
+          <p>Bring the project together with workmanship, detail, and execution standards that support lasting value.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Services</div>
+          <h2>Conversion-focused construction support for modern builds.</h2>
+          <p>
+            The offer is positioned around the services shown in your profile and expanded into a landing-page
+            structure that speaks to clients who want reliable planning, visible management, and a polished finish.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">SP</div>
+            <h3>Strategic Planning</h3>
+            <p>Define scope, priorities, and the right execution path before budget and timeline drift can take hold.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">PM</div>
+            <h3>Project Management</h3>
+            <p>Coordinate delivery with tighter oversight, faster communication, and stronger accountability across the job.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">RB</div>
+            <h3>Residential Building</h3>
+            <p>Support new residential work with practical planning, structured execution, and quality-driven site control.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">RF</div>
+            <h3>Renovations & Finishes</h3>
+            <p>Upgrade existing spaces with workmanship, detail coordination, and finish quality that strengthens the result.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-wrap">
+        <div class="about-frame reveal">
+          <img src="./about-web.jpg" alt="Construction professionals reviewing a live building site">
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow">About Nkosi</div>
+          <h2>Built around disciplined execution and sustainable growth.</h2>
+          <div class="about-story">
+            <p>
+              Nkosi Building Projects is a Johannesburg-based construction company focused on residential
+              building, renovations, and finishing projects. The business is positioned around compliance,
+              quality workmanship, and reliable delivery that remains cost-conscious.
+            </p>
+            <p>
+              The company profile also highlights active NHBRC and CIDB compliance, plus capabilities in
+              strategic planning, startups, and communication. That combination makes the business especially
+              credible for clients who need a builder that can think commercially while delivering practically.
+            </p>
+          </div>
+          <div class="about-points">
+            <div class="about-point">
+              <strong>Founder-led direction</strong>
+              <span>Led by Kwanele (Asanda) Nkosi with a clear focus on long-term industry relationships.</span>
+            </div>
+            <div class="about-point">
+              <strong>Compliance-minded delivery</strong>
+              <span>Structured around professional standards that support trust, reliability, and smoother execution.</span>
+            </div>
+            <div class="about-point">
+              <strong>Residential project expertise</strong>
+              <span>Well suited to homes, upgrades, and finishing work where detail and coordination matter.</span>
+            </div>
+            <div class="about-point">
+              <strong>Growth-oriented planning</strong>
+              <span>Future-focused thinking for property owners and partners who want a stronger build process.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Process</div>
+          <h2>A simple path from first conversation to finished delivery.</h2>
+          <p>
+            High-converting landing pages work best when the next step feels easy. This section removes friction by
+            showing how an enquiry moves forward.
+          </p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <div class="process-step">1</div>
+            <h3>Project Brief</h3>
+            <p>Share the type of build, the location, and the result you want so the scope can be framed correctly.</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-step">2</div>
+            <h3>Planning & Alignment</h3>
+            <p>Review priorities, constraints, and delivery needs before work begins, reducing delays later on.</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-step">3</div>
+            <h3>Execution & Finish</h3>
+            <p>Move into delivery with stronger visibility, clearer communication, and finish quality that reflects the plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container cta-wrap">
+        <div class="cta-panel reveal">
+          <div class="eyebrow">Start A Project</div>
+          <h2>Turn interest into a clear next step for serious enquiries.</h2>
+          <p>
+            This section is designed to capture intent cleanly. It prepares a project brief on-page so the layout already
+            works like a lead-generation landing page, and it can be wired to email or WhatsApp later without changing the design.
+          </p>
+          <div class="cta-highlights">
+            <span class="stat-pill"><span class="dot" aria-hidden="true"></span>Residential builds and renovations</span>
+            <span class="stat-pill"><span class="dot" aria-hidden="true"></span>Johannesburg and surrounding Gauteng areas</span>
+            <span class="stat-pill"><span class="dot" aria-hidden="true"></span>Structured for consultation-ready leads</span>
+          </div>
+        </div>
+
+        <div class="form-panel reveal">
+          <form data-brief-form>
+            <div class="form-grid">
+              <label>
+                Full name
+                <input name="name" type="text" placeholder="Your name" required>
+              </label>
+              <label>
+                Phone or WhatsApp
+                <input name="contact" type="text" placeholder="Best number to reach you" required>
+              </label>
+            </div>
+            <div class="form-grid">
+              <label>
+                Project type
+                <select name="project" required>
+                  <option value="">Select a project type</option>
+                  <option>New residential build</option>
+                  <option>Renovation</option>
+                  <option>Finishing project</option>
+                  <option>Project management support</option>
+                </select>
+              </label>
+              <label>
+                Project location
+                <input name="location" type="text" placeholder="Suburb / city" required>
+              </label>
+            </div>
+            <label>
+              Project details
+              <textarea
+                name="details"
+                placeholder="Tell Nkosi Building Projects what you want to build, improve, or finish."
+                required
+              ></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Prepare My Project Brief</button>
+            <p class="form-note">
+              The page creates a ready-to-send brief on screen. If you want, I can wire this form to your preferred email,
+              CRM, or WhatsApp flow next.
+            </p>
+          </form>
+
+          <div class="brief-output" data-brief-output hidden>
+            <strong data-brief-title>Your project brief is ready.</strong>
+            <pre data-brief-text></pre>
+            <button class="button button-secondary" type="button" data-copy-brief>Copy Brief</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-row">
+      <span>© <span data-year></span> Nkosi Building Projects (Pty) Ltd</span>
+      <span>Designed as a one-page premium landing page for lead generation.</span>
+    </div>
+  </footer>
+
+  <script>
+    const yearNode = document.querySelector("[data-year]");
+    if (yearNode) {
+      yearNode.textContent = new Date().getFullYear();
+    }
+
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    const form = document.querySelector("[data-brief-form]");
+    const output = document.querySelector("[data-brief-output]");
+    const briefTitle = document.querySelector("[data-brief-title]");
+    const briefText = document.querySelector("[data-brief-text]");
+    const copyButton = document.querySelector("[data-copy-brief]");
+    let latestBrief = "";
+
+    if (form && output && briefTitle && briefText && copyButton) {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const contact = formData.get("contact");
+        const project = formData.get("project");
+        const location = formData.get("location");
+        const details = formData.get("details");
+
+        latestBrief =
+          "Client: " + name + "\n" +
+          "Phone / WhatsApp: " + contact + "\n" +
+          "Project type: " + project + "\n" +
+          "Location: " + location + "\n\n" +
+          "Project details:\n" + details + "\n\n" +
+          "Prepared via the Nkosi Building Projects landing page.";
+
+        briefTitle.textContent = "Project brief for " + name;
+        briefText.textContent = latestBrief;
+        output.hidden = false;
+        output.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+
+      copyButton.addEventListener("click", async () => {
+        if (!latestBrief) {
+          return;
+        }
+
+        try {
+          await navigator.clipboard.writeText(latestBrief);
+          copyButton.textContent = "Copied";
+          window.setTimeout(() => {
+            copyButton.textContent = "Copy Brief";
+          }, 1600);
+        } catch (error) {
+          copyButton.textContent = "Copy failed";
+          window.setTimeout(() => {
+            copyButton.textContent = "Copy Brief";
+          }, 1600);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
