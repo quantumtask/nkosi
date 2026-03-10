@@ -572,6 +572,38 @@
       width: fit-content;
     }
 
+    .quick-actions {
+      margin-top: 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .button-whatsapp {
+      color: #f6fff9;
+      background: linear-gradient(135deg, #25d366, #128c4a);
+      box-shadow: 0 14px 36px rgba(18, 140, 74, 0.28);
+    }
+
+    .contact-meta {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      width: fit-content;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .contact-link strong {
+      font-weight: 700;
+    }
+
     form {
       display: grid;
       gap: 1rem;
@@ -667,6 +699,15 @@
       flex-wrap: wrap;
     }
 
+    .floating-whatsapp {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      z-index: 45;
+      min-width: 0;
+      box-shadow: 0 18px 38px rgba(18, 140, 74, 0.34);
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(22px);
@@ -695,6 +736,10 @@
 
       .hero-note {
         max-width: 100%;
+      }
+
+      .quick-actions {
+        flex-direction: column;
       }
     }
 
@@ -736,6 +781,11 @@
 
       .hero-actions {
         flex-direction: column;
+      }
+
+      .floating-whatsapp {
+        right: 0.85rem;
+        bottom: 0.85rem;
       }
     }
 
@@ -947,13 +997,34 @@
           <div class="eyebrow">Start A Project</div>
           <h2>Turn interest into a clear next step for serious enquiries.</h2>
           <p>
-            This section is designed to capture intent cleanly. It prepares a project brief on-page so the layout already
-            works like a lead-generation landing page, and it can be wired to email or WhatsApp later without changing the design.
+            Use the form below, message directly on WhatsApp, or send an email. The page now supports all three paths
+            so a serious enquiry can convert immediately.
           </p>
           <div class="cta-highlights">
             <span class="stat-pill"><span class="dot" aria-hidden="true"></span>Residential builds and renovations</span>
             <span class="stat-pill"><span class="dot" aria-hidden="true"></span>Johannesburg and surrounding Gauteng areas</span>
             <span class="stat-pill"><span class="dot" aria-hidden="true"></span>Structured for consultation-ready leads</span>
+          </div>
+          <div class="quick-actions">
+            <a
+              class="button button-whatsapp"
+              href="https://wa.me/27814626718?text=Hello%20Nkosi%20Building%20Projects%2C%20I%20want%20to%20start%20a%20project."
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp Now
+            </a>
+            <a class="button button-secondary" href="mailto:Kwan3l3nkosi.23@gmail.com">Email Us</a>
+          </div>
+          <div class="contact-meta">
+            <a class="contact-link" href="tel:+27814626718">
+              <strong>Call:</strong>
+              <span>081 462 6718</span>
+            </a>
+            <a class="contact-link" href="mailto:Kwan3l3nkosi.23@gmail.com">
+              <strong>Email:</strong>
+              <span>Kwan3l3nkosi.23@gmail.com</span>
+            </a>
           </div>
         </div>
 
@@ -995,8 +1066,10 @@
             </label>
             <button class="button button-primary" type="submit">Prepare My Project Brief</button>
             <p class="form-note">
-              The page creates a ready-to-send brief on screen. If you want, I can wire this form to your preferred email,
-              CRM, or WhatsApp flow next.
+              The page creates a ready-to-send brief on screen. For direct contact, use WhatsApp on
+              <a href="https://wa.me/27814626718?text=Hello%20Nkosi%20Building%20Projects%2C%20I%20want%20to%20start%20a%20project." target="_blank" rel="noreferrer">081 462 6718</a>
+              or email
+              <a href="mailto:Kwan3l3nkosi.23@gmail.com">Kwan3l3nkosi.23@gmail.com</a>.
             </p>
           </form>
 
@@ -1009,6 +1082,15 @@
       </div>
     </section>
   </main>
+
+  <a
+    class="button button-whatsapp floating-whatsapp"
+    href="https://wa.me/27814626718?text=Hello%20Nkosi%20Building%20Projects%2C%20I%20want%20to%20start%20a%20project."
+    target="_blank"
+    rel="noreferrer"
+  >
+    WhatsApp
+  </a>
 
   <footer class="site-footer">
     <div class="footer-row">
